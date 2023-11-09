@@ -1,0 +1,5 @@
+export const DEFAULT_URL = '#'
+export const HOME_URL = '#home'
+export const PROJECTS_URL = '#projects'
+export const ABOUT_URL = '#about'
+export const GITHUB_PROFILE_URL = 'https://github.com/goddmartee'

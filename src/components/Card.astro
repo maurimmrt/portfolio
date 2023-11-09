@@ -1,0 +1,52 @@
+---
+import { BLANK_TARGET } from '../consts/targets';
+
+import LinkIcon from '../components/icons/Link.astro';
+import SmallGithubIcon from '../components/icons/SmallGithub.astro';
+import Link from './Link.astro';
+
+interface Props {
+	title: string;
+	techs: string[];
+	cover: string;
+	linkweb?: string;
+	linkcode?: string;
+}
+
+const { title, techs, cover, linkweb, linkcode } = Astro.props;
+---
+
+<div class="bg-zinc-800 rounded-lg overflow-hidden">
+	<img
+		class="w-full"
+		src={cover}
+	/>
+	<div class="p-3">
+		<div class="flex justify-between">
+			<p>{title}</p>
+			<div>
+				<Link
+					href={linkweb}
+					target={BLANK_TARGET}
+				>
+					<LinkIcon />
+				</Link>
+				<Link
+					href={linkcode}
+					target={BLANK_TARGET}
+				>
+					<SmallGithubIcon />
+				</Link>
+			</div>
+		</div>
+		<div>
+			{
+				techs.map((tech) => (
+					<p class="bg-zinc-900 text-gray-300 inline-block me-1 mt-3 px-3 rounded">
+						{tech}
+					</p>
+				))
+			}
+		</div>
+	</div>
+</div>

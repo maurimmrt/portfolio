@@ -1,0 +1,22 @@
+{
+	"name": "portfolio",
+	"type": "module",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"ts-standard": "ts-standard",
+		"ts-standard-fix": "ts-standard --fix"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^4.0.0",
+		"astro": "^2.10.15",
+		"tailwindcss": "3.3.3"
+	},
+	"devDependencies": {
+		"ts-standard": "12.0.2"
+	}
+}

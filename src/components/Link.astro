@@ -1,0 +1,20 @@
+---
+import { DEFAULT_URL } from '../consts/urls';
+
+interface Props {
+	target?: string;
+	href?: string;
+	children: string;
+}
+
+const { href, target } = Astro.props;
+---
+
+<a
+	class="text-gray-400 hover:text-current"
+	href={href ?? DEFAULT_URL}
+	target={target}
+	rel="noreferrer"
+>
+	<slot />
+</a>
